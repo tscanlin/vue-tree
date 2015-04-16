@@ -10,7 +10,7 @@
   },
   "bugs": "https://github.com/vuejs/vue-tree/issues",
   "devDependencies": {
-    "vue": "^0.10.5"
+    "vue": "^0.11.5"
   },
   "scripts": {
     "build": "browserify -e components/tree.js -o example/bundle.js",

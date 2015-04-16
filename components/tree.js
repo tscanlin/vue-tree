@@ -53,6 +53,7 @@ Vue.component('item', {
   },
   methods: {
     toggle: function () {
+      console.log('this', this.isFolder, this.open);
       if (this.isFolder) {
         this.open = !this.open
       }
@@ -69,6 +70,12 @@ Vue.component('item', {
         name: 'new stuff'
       })
     }
+  },
+  ready: function() {
+    console.log('test!');
+    this.$watch('open', function(v) {
+      console.log(v);
+    })
   }
 })
 
@@ -76,6 +83,7 @@ Vue.component('item', {
 var demo = new Vue({
   el: '#demo',
   data: {
-    treeData: data
+    treeData: data,
+    open: false
   }
 })
